@@ -9,7 +9,7 @@ const appRouter = createBrowserRouter([
         element : <Login/>
     },
     {
-        path : "/browse", // using ":" for creating dynamic url
+        path : "/browse",
         element : <Browse/>
     },
 ])
