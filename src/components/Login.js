@@ -2,7 +2,7 @@ import React, { useState ,useRef } from 'react'
 import Header from './Header';
 import loginBgLogo from "../utils/loginBgLogo.jpg"
 import { loginFieldsValidation,signUpFieldsValidation } from '../utils/loginFieldsValidation';
-import { auth } from '../utils/firebase';
+import { auth } from '../utils/ConfigFileForFireBase';
 import { createUserWithEmailAndPassword , signInWithEmailAndPassword } from "firebase/auth";
 // useRef() --->  hook used to give reference
 
@@ -38,7 +38,7 @@ const Login = () => {
           })
           .catch((error) => {
             const errorCode = error.code;
-            const errorMessage = error.message;
+            // const errorMessage = error.message;
             // ..
             setErrorMessage(errorCode);
           });          
@@ -54,7 +54,7 @@ const Login = () => {
           })
           .catch((error) => {
             const errorCode = error.code;
-            const errorMessage = error.message;
+            // const errorMessage = error.message;
           
             setErrorMessage(errorCode);
           });          
