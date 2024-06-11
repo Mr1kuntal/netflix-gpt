@@ -1,13 +1,16 @@
 # NetFlix-GPT
 - create react app
 - install tailwind
-
+- install react router dom
+- Login page is made (header for login is also made)
+- redirecting to browse page is made
 
 # Commands used
 - npx create-react-app my-app
 - npm install -D tailwindcss
 - npx tailwindcss init
 - configured tailwind.config.js
+- npm i react-router-dom
 
 
 # app features
