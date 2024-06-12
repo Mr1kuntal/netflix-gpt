@@ -10,6 +10,9 @@
 - redirecting to browse page is made
 - validation for login form is made
 - firebase is installed and deploy to firebase
+- installed react-redux and rtk
+- made redux store for user login info
+- made sign out sign in functionality fully right
 
 # Commands used
 - npx create-react-app my-app
@@ -22,6 +25,9 @@
 - firebase login
 - firebase init
 - firebase deploy
+- npm i @reduxjs/toolkit
+- npm i react-redux
+
 
 
 # app features
@@ -40,3 +46,16 @@
 - NetFlixGPT
     - searchBar
     - movie suggestions
+
+# things learned
+- robots.txt file ---> is a text file that tells search engine crawlers which pages or files they can or can't request from your site
+- Search engine crawlers ---> also known as spiders, robots, or bots, are programs that automatically scan and index websites to help them appear in search engine results
+- regex.test() ---> will test a string against a regex and returns true if string matches
+- onSubmit ---> what to do when we submit form , this "e.preventDefault()" will not submit form
+- useRef() --->  hook used to give reference
+- useNavigate() ---> hook used to navigate between component
+- createUserWithEmailAndPassword() ---> function provided by google firebase to create a User With Email And Password
+- updateProfile() ---> function provided by google firebase to update a user profile which already exist
+- signInWithEmailAndPassword() ---> function provided by google firebase to login a user with email and password
+- signOut() ---> function provided by google firebase to signout a user
+

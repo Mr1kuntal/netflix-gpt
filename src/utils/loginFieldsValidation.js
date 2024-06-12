@@ -1,5 +1,3 @@
-// regex.test() ---> will test a string against a regex and returns true if string matches
-
 export const loginFieldsValidation = (email,password) => {
 
     const isEmailValid = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email); // test() returns true if email is valid 

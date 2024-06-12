@@ -3,8 +3,11 @@ import Header from './Header';
 import loginBgLogo from "../utils/loginBgLogo.jpg"
 import { loginFieldsValidation,signUpFieldsValidation } from '../utils/loginFieldsValidation';
 import { auth } from '../utils/ConfigFileForFireBase';
-import { createUserWithEmailAndPassword , signInWithEmailAndPassword } from "firebase/auth";
-// useRef() --->  hook used to give reference
+import { createUserWithEmailAndPassword , signInWithEmailAndPassword , updateProfile } from "firebase/auth";
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addUser } from '../utils/userSlice';
+
 
 const Login = () => {
     const [isLoginForm,setIsLoginForm] = useState(true);
@@ -12,7 +15,8 @@ const Login = () => {
     const email = useRef(null);
     const password = useRef(null);
     const [errorMessage,setErrorMessage] = useState("");
-
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const toggleLoginForm = () => {
         setIsLoginForm(!isLoginForm);
@@ -30,34 +34,49 @@ const Login = () => {
         if(!isLoginForm){
           // signUp logic
           createUserWithEmailAndPassword(auth,email.current.value,password.current.value)
-          .then((userCredential) => {
-            // Signed up 
-            const user = userCredential.user;
-            // ...
-            setErrorMessage("SignUp successfull");
-          })
-          .catch((error) => {
-            const errorCode = error.code;
-            // const errorMessage = error.message;
-            // ..
-            setErrorMessage(errorCode);
-          });          
+            .then((userCredential) => {
+                // Signed up 
+                // const user = userCredential.user;
+                // console.log(userCredential);
+                // console.log(user);
+
+                setErrorMessage("SignUp successfull");
+                updateProfile(userCredential.user.auth.currentUser, {displayName: name.current.value})
+                    .then(() => {
+                        // Profile updated!
+                        const {uid , email , displayName } = userCredential.user.auth.currentUser;
+                        dispatch(addUser({uid:uid , email: email , displayName : displayName}));
+                    })
+                    .catch((error) => {
+                        // An error occurred
+                    });
+                navigate("/browse");
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                // const errorMessage = error.message;
+                setErrorMessage(errorCode);
+            });          
 
         } else {
           // login logic
           signInWithEmailAndPassword(auth,email.current.value,password.current.value)
-          .then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-            // ...
-            setErrorMessage("LogIn successfull");
-          })
-          .catch((error) => {
-            const errorCode = error.code;
-            // const errorMessage = error.message;
-          
-            setErrorMessage(errorCode);
-          });          
+            .then((userCredential) => {
+                // Signed in 
+                // const user = userCredential.user;
+                // console.log(userCredential);
+                // console.log(user);
+
+                setErrorMessage("LogIn successfull");
+                const {uid , email , displayName } = userCredential.user.auth.currentUser;
+                dispatch(addUser({uid:uid , email: email , displayName : displayName}));
+                navigate("/browse");
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                // const errorMessage = error.message;
+                setErrorMessage(errorCode);
+            });          
         }
 
 
@@ -71,8 +90,7 @@ const Login = () => {
         <div className='absolute'>
             <img src={loginBgLogo} alt='loginBgLogo'/>
         </div>
-        <form onSubmit={(e)=>{e.preventDefault()}} className='text-center absolute p-10 bg-black w-3/12 my-36 mx-auto right-0 left-0 bg-opacity-80'> 
-          {/* onSubmit ---> what to do when submit form --> e.preventDefault() will not submit form */}
+        <form onSubmit={(e)=>{e.preventDefault()}} className='text-center absolute p-10 bg-black w-3/12 my-36 mx-auto right-0 left-0 bg-opacity-80'>
            <h1 className='font-bold text-2xl text-white m-4'>{isLoginForm ? "Login" : "SignUp"}</h1>
             {!isLoginForm && <input ref={name} type='text' placeholder='full name' className='rounded-sm p-3 m-2 bg-gray-800'></input>}
             <input ref={email} type='text' placeholder='email' className='rounded-sm p-3 m-2 bg-gray-800'></input>
