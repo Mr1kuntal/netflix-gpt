@@ -3,14 +3,14 @@ import Header from './Header'
 import { useSelector } from 'react-redux';
 
 const Browse = () => {
-  const user = useSelector((store) => store.user);
+  const userInfo = useSelector((store) => store.user);
 
   return (
     <div>
       <div>
         <Header/>
       </div>
-      {/* {user && <div><h1>Name : {user.displayName}</h1><h2>email : {user.email}</h2></div>} */}
+      {userInfo && <div><h1>Name : {userInfo.displayName}</h1><h2>email : {userInfo.email}</h2></div>}
       
     </div>
   )

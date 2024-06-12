@@ -13,6 +13,9 @@
 - installed react-redux and rtk
 - made redux store for user login info
 - made sign out sign in functionality fully right
+- removed react.strictmode , because  of it useEffect() called twice
+- restricted logged out user to access browse page(user cant go to browse page without login and if user is logged in user cant go to login page without log out)
+- app routing is shifted to app.js component because of navigation
 
 # Commands used
 - npx create-react-app my-app
@@ -58,4 +61,5 @@
 - updateProfile() ---> function provided by google firebase to update a user profile which already exist
 - signInWithEmailAndPassword() ---> function provided by google firebase to login a user with email and password
 - signOut() ---> function provided by google firebase to signout a user
+- onAuthStateChanged() ---> function provided by google firebase to get alert if user signin or signout, means if user is signin or signout this function will know about it
 

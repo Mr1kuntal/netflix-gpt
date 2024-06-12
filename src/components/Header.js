@@ -10,7 +10,7 @@ import { removeUser } from '../utils/userSlice';
 const Header = () => {  
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const user = useSelector((store) => store.user);
+  const userInfo = useSelector((store) => store.user);
 
   const handleSignOut = () => {
     signOut(auth).then(() => {
@@ -23,11 +23,12 @@ const Header = () => {
     });
   }
 
+
   return (
     <div className='absolute w-full p-10 bg-gradient-to-b from-black z-10 flex justify-between'>
         <img className='w-60' src={netflixGPTLogo} alt='netflixGPTLogo'/>
         <div>
-            {user && <button className=' text-white bg-red-600 rounded-md px-6 py-1' onClick={handleSignOut}>SignOut</button>} 
+            {userInfo && <button className=' text-white bg-red-600 rounded-md px-6 py-1' onClick={handleSignOut}>SignOut</button>} 
         </div>        
     </div>
 

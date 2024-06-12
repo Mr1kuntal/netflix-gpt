@@ -4,7 +4,6 @@ import loginBgLogo from "../utils/loginBgLogo.jpg"
 import { loginFieldsValidation,signUpFieldsValidation } from '../utils/loginFieldsValidation';
 import { auth } from '../utils/ConfigFileForFireBase';
 import { createUserWithEmailAndPassword , signInWithEmailAndPassword , updateProfile } from "firebase/auth";
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 
@@ -15,7 +14,6 @@ const Login = () => {
     const email = useRef(null);
     const password = useRef(null);
     const [errorMessage,setErrorMessage] = useState("");
-    const navigate = useNavigate();
     const dispatch = useDispatch();
 
     const toggleLoginForm = () => {
@@ -50,7 +48,6 @@ const Login = () => {
                     .catch((error) => {
                         // An error occurred
                     });
-                navigate("/browse");
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -68,9 +65,6 @@ const Login = () => {
                 // console.log(user);
 
                 setErrorMessage("LogIn successfull");
-                const {uid , email , displayName } = userCredential.user.auth.currentUser;
-                dispatch(addUser({uid:uid , email: email , displayName : displayName}));
-                navigate("/browse");
             })
             .catch((error) => {
                 const errorCode = error.code;
