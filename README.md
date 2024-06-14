@@ -26,6 +26,12 @@
 - made secondary container and fetched more movies from tmdb
 - updated movieSlice and useGetMovie
 - added movieCard and movieGenre
+- made toggle feature for gpt page
+- made gpt search bar
+- made gpt page multilingual
+- added gpt Slice and language slice to redux store
+- made language constants for changing language of gpt page
+
 
 
 # Commands used
@@ -51,15 +57,18 @@
 
 - Browse (after authentication)
     - header
-    - Main movie
+    - Main Container
         - trailor in background
         - title and description
-        - movie suggestions
-            - moviesList * N
+    - Secondary Conatiner
+        - movie genre
+            - moviesCard * N
 
 - NetFlixGPT
     - searchBar
     - movie suggestions
+
+    
 
 # things learned
 - robots.txt file ---> is a text file that tells search engine crawlers which pages or files they can or can't request from your site
@@ -74,3 +83,5 @@
 - signOut() ---> function provided by google firebase to signout a user
 - onAuthStateChanged() ---> function provided by google firebase to get alert if user signin or signout, means if user is signin or signout this function will know about it
 - iframe ---> embed youtube videos to html using this
+- how to make website multilingual
+

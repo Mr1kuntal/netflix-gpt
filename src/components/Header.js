@@ -6,6 +6,9 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch , useSelector } from 'react-redux';
 import { removeUser } from '../utils/reduxStore/userSlice';
 import { removeMovie, removePopularMovie, removeTopRatedMovie, removeTrailor, removeUpcomingMovie } from '../utils/reduxStore/movieSlice';
+import { toggleGptPage ,offGptPage } from '../utils/reduxStore/gptSlice';
+import {SupportedLang} from "../utils/languageConstant";
+import {changeLanguage} from "../utils/reduxStore/languageSlice";
 
 
 const Header = () => {  
@@ -21,6 +24,7 @@ const Header = () => {
       dispatch(removePopularMovie());
       dispatch(removeTopRatedMovie());
       dispatch(removeUpcomingMovie());
+      dispatch(offGptPage());
       dispatch(removeUser());
       navigate("/");
     }).catch((error) => {
@@ -30,12 +34,29 @@ const Header = () => {
     });
   }
 
+  const handleGptPage = () => {
+    dispatch(toggleGptPage());
+  }
+
+  const handleLanguageChange = (e) => {
+    dispatch(changeLanguage(e.target.value));
+  }
+
+  const showGptPage = useSelector((store) => store.gpt.toggleGpt);
 
   return (
     <div className='absolute w-full p-10 bg-gradient-to-b from-black z-10 flex justify-between'>
         <img className='w-60' src={netflixGPTLogo} alt='netflixGPTLogo'/>
-        <div>
-            {userInfo && <button className=' text-white bg-red-600 rounded-md px-6 py-1' onClick={handleSignOut}>SignOut</button>} 
+        <div className='flex'>
+            {userInfo && <>
+            {showGptPage && 
+            <select className="px-2 rounded-md bg-gray-600 text-white" onChange={handleLanguageChange} >
+              {SupportedLang.map((language) => (<option value={language.identifier} key={language.identifier} >{language.name}</option>))}
+            </select>}
+            
+            <button className='text-white rounded-md px-6 py-1 bg-blue-600 mx-2' onClick={handleGptPage}>{showGptPage ? "Home" : "GptSearch"}</button>
+            <button className='text-white rounded-md px-6 py-1 bg-red-600' onClick={handleSignOut}>SignOut</button>
+            </>} 
         </div>        
     </div>
 
