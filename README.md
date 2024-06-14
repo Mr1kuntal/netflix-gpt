@@ -16,6 +16,15 @@
 - removed react.strictmode , because  of it useEffect() called twice
 - restricted logged out user to access browse page(user cant go to browse page without login and if user is logged in user cant go to login page without log out)
 - app routing is shifted to app.js component because of navigation
+- made tmdb account and api key is made 
+- made movie slice and added movie slice to appstore
+- fetch movie from tmdb and added them to movie slice
+- made MainContainer component fully functional using two sub component (videoTitle,videoBg)
+- made two hooks useGetMovie , useGetTrailor
+- embeded youtube video to website
+- made two dummy data files (movieList.json , trailor.json) if tmdb website fetch doesn't work 
+
+
 
 # Commands used
 - npx create-react-app my-app
@@ -62,4 +71,4 @@
 - signInWithEmailAndPassword() ---> function provided by google firebase to login a user with email and password
 - signOut() ---> function provided by google firebase to signout a user
 - onAuthStateChanged() ---> function provided by google firebase to get alert if user signin or signout, means if user is signin or signout this function will know about it
-
+- iframe ---> embed youtube videos to html using this

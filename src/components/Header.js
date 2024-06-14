@@ -5,6 +5,7 @@ import { auth } from '../utils/ConfigFileForFireBase';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch , useSelector } from 'react-redux';
 import { removeUser } from '../utils/userSlice';
+import { removeMovie, removeTrailor } from '../utils/movieSlice';
 
 
 const Header = () => {  
@@ -15,6 +16,8 @@ const Header = () => {
   const handleSignOut = () => {
     signOut(auth).then(() => {
       // Sign-out successful.
+      dispatch(removeMovie());
+      dispatch(removeTrailor());
       dispatch(removeUser());
       navigate("/");
     }).catch((error) => {
