@@ -1,5 +1,5 @@
 import React from 'react'
-import useGetTrailor from '../utils/useGetTrailor'
+import useGetTrailor from '../utils/customHooks/useGetTrailor'
 import { useSelector } from 'react-redux';
 
 const VideoBg = ({movieId}) => {

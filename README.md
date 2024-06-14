@@ -23,7 +23,9 @@
 - made two hooks useGetMovie , useGetTrailor
 - embeded youtube video to website
 - made two dummy data files (movieList.json , trailor.json) if tmdb website fetch doesn't work 
-
+- made secondary container and fetched more movies from tmdb
+- updated movieSlice and useGetMovie
+- added movieCard and movieGenre
 
 
 # Commands used

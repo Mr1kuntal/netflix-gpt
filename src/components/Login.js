@@ -5,7 +5,7 @@ import { loginFieldsValidation,signUpFieldsValidation } from '../utils/loginFiel
 import { auth } from '../utils/ConfigFileForFireBase';
 import { createUserWithEmailAndPassword , signInWithEmailAndPassword , updateProfile } from "firebase/auth";
 import { useDispatch } from 'react-redux';
-import { addUser } from '../utils/userSlice';
+import { addUser } from '../utils/reduxStore/userSlice';
 
 
 const Login = () => {

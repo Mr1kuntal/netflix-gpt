@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './Header'
 // import { useSelector } from 'react-redux';
-import useGetMovie from '../utils/useGetMovie';
+import useGetMovie from '../utils/customHooks/useGetMovie';
 import MainContainer from './MainContainer';
 import SecondaryContainer from './SecondaryContainer';
 
@@ -9,6 +9,7 @@ const Browse = () => {
   // const userInfo = useSelector((store) => store.user);
 
   useGetMovie();
+  
 
   return (
     <div>

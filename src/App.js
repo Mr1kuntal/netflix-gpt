@@ -1,6 +1,6 @@
 import Body from "./components/Body";
 import { Provider } from "react-redux";
-import appStore from "./utils/appStore";
+import appStore from "./utils/reduxStore/appStore";
 import {createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
 import Login from "./components/Login";
 import Browse from "./components/Browse";

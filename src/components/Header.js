@@ -4,8 +4,8 @@ import { signOut } from "firebase/auth";
 import { auth } from '../utils/ConfigFileForFireBase';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch , useSelector } from 'react-redux';
-import { removeUser } from '../utils/userSlice';
-import { removeMovie, removeTrailor } from '../utils/movieSlice';
+import { removeUser } from '../utils/reduxStore/userSlice';
+import { removeMovie, removePopularMovie, removeTopRatedMovie, removeTrailor, removeUpcomingMovie } from '../utils/reduxStore/movieSlice';
 
 
 const Header = () => {  
@@ -18,11 +18,15 @@ const Header = () => {
       // Sign-out successful.
       dispatch(removeMovie());
       dispatch(removeTrailor());
+      dispatch(removePopularMovie());
+      dispatch(removeTopRatedMovie());
+      dispatch(removeUpcomingMovie());
       dispatch(removeUser());
       navigate("/");
     }).catch((error) => {
       // An error happened.
       navigate("/error");
+      console.log(error);
     });
   }
 
