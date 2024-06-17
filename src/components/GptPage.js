@@ -7,7 +7,7 @@ const GptPage = () => {
   return (
     <div>
         <div className='absolute -z-10'>
-            <img src={loginBgLogo} alt='loginBgLogo'/>
+            <img className='h-screen object-cover md:w-screen md:object-cover' src={loginBgLogo} alt='loginBgLogo'/>
         </div>      
       <GptSearchBar/>
       <GptMovieSuggestion/>

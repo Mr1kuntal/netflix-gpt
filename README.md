@@ -79,7 +79,7 @@
 
 - NetFlixGPT
     - GPT_Search_Bar
-        -text generation field
+        - text generation field
     - movie search bar
         - searched movies
 
@@ -103,4 +103,6 @@
 - how to use chaptgpt apis
 - how to open new window for redirection links ---> window.open()
 - memoisation of components
+- how to make api key secure ---> process.env (create file named ".env" and add "REACT_APP_" in front of variable name)
+- how to make responsive website using tailwind
 

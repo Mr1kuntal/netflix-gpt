@@ -38,9 +38,9 @@ const Header = () => {
   const showGptPage = useSelector((store) => store.gpt.toggleGpt);
 
   return (
-    <div className='absolute w-full p-10 bg-gradient-to-b from-black z-10 flex justify-between'>
-        <img className='w-60' src={netflixGPTLogo} alt='netflixGPTLogo'/>
-        <div className='flex'>
+    <div className='absolute w-full p-10 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between'>
+        <img className='w-60 mx-auto md:mx-0 mb-10 md:mb-0' src={netflixGPTLogo} alt='netflixGPTLogo'/>
+        <div className='flex justify-center'>
             {userInfo && <>
             {showGptPage && 
             <select className="px-2 rounded-md bg-gray-600 text-white" onChange={handleLanguageChange} >

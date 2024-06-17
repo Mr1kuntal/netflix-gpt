@@ -82,9 +82,9 @@ const Login = () => {
     <div>
         <Header/>
         <div className='absolute'>
-            <img src={loginBgLogo} alt='loginBgLogo'/>
+            <img className='h-screen object-cover md:w-screen' src={loginBgLogo} alt='loginBgLogo'/>
         </div>
-        <form onSubmit={(e)=>{e.preventDefault()}} className='text-center absolute p-10 bg-black w-3/12 my-36 mx-auto right-0 left-0 bg-opacity-80'>
+        <form onSubmit={(e)=>{e.preventDefault()}} className='text-center absolute p-4 md:p-10 bg-black w-full md:w-3/12 my-28 mx-auto right-0 left-0 bg-opacity-80'>
            <h1 className='font-bold text-2xl text-white m-4'>{isLoginForm ? "Login" : "SignUp"}</h1>
             {!isLoginForm && <input ref={name} type='text' placeholder='full name' className='rounded-sm p-3 m-2 bg-gray-800'></input>}
             <input ref={email} type='text' placeholder='email' className='rounded-sm p-3 m-2 bg-gray-800'></input>
@@ -92,7 +92,7 @@ const Login = () => {
             <p className='text-red-700'>{errorMessage}</p>
             <button className=' text-white bg-red-600 rounded-md py-3 px-14 m-3' onClick={handleValidation}>{isLoginForm ? "Login" : "SignUp"}</button>
             <p className='text-white my-5 cursor-pointer' onClick={toggleLoginForm} >{isLoginForm ? "Don't have an account?   SignUp" : "Already a registered user?   Login"}</p>
-            {!isLoginForm && <div className='rounded-sm mx-6 my-2 p-3 bg-gray-100 text-start w-10/12 text-red-600 text-xs'>Password must contain<ul><li>- At least one digit</li><li>- At least one lowercase letter</li><li>- At least one uppercase letter</li><li>- A minimum length of 8 characters</li></ul></div>}
+            {!isLoginForm && <div className='rounded-sm mx-6 my-2 p-3 bg-gray-800 bg-opacity-80 text-start w-10/12 text-red-600 text-xs'>Password must contain<ul><li>- At least one digit</li><li>- At least one lowercase letter</li><li>- At least one uppercase letter</li><li>- A minimum length of 8 characters</li></ul></div>}
         </form>
         
     </div>
