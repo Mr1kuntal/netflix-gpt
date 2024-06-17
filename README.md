@@ -31,6 +31,18 @@
 - made gpt page multilingual
 - added gpt Slice and language slice to redux store
 - made language constants for changing language of gpt page
+- installed openai library for using openai api
+- used pawan/osman custom openai apis (because openai official api is paid)
+- text animation for gpt generated result
+- made tv show search bar for searching tv shows 
+- made tv show card to show searched result
+- used tvmaze.com api to search for tv shows and fetching data (beacause tmdb api in not working in india)
+- dispatching hard coded data for movies (beacause tmdb api in not working in india)
+- deleted all remove actions from movieslice because it is not useful
+- added search input action to movieSlice to add searched tv show data to store
+- added search input initial value for search input action to display some initial tv shows on page
+- added redirection to all images on gpt page (they will redirect to imdb)
+- done memoisation so that component don't have to fetch data again and again
 
 
 
@@ -47,6 +59,7 @@
 - firebase deploy
 - npm i @reduxjs/toolkit
 - npm i react-redux
+- npm i openai
 
 
 
@@ -65,8 +78,10 @@
             - moviesCard * N
 
 - NetFlixGPT
-    - searchBar
-    - movie suggestions
+    - GPT_Search_Bar
+        -text generation field
+    - movie search bar
+        - searched movies
 
     
 
@@ -84,4 +99,8 @@
 - onAuthStateChanged() ---> function provided by google firebase to get alert if user signin or signout, means if user is signin or signout this function will know about it
 - iframe ---> embed youtube videos to html using this
 - how to make website multilingual
+- how to do text animation like chatgpt
+- how to use chaptgpt apis
+- how to open new window for redirection links ---> window.open()
+- memoisation of components
 

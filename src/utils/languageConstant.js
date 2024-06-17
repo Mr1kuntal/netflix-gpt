@@ -1,15 +1,21 @@
 const lang = {
     en : {
+        gptName : "chatGPT",
         search : "Search",
-        gptSearchPlaceholder : "what would you like to watch today?" ,
+        searchPlaceholder : "Search Tv shows",
+        gptSearchPlaceholder : "Get TV shows suggestion" ,
     },
     hindi : {
+        gptName : "चैटजीपीटी",
         search : "खोज",
-        gptSearchPlaceholder : "आज आप क्या देखना चाहेंगे?" ,
+        searchPlaceholder : "टीवी शो खोजें",
+        gptSearchPlaceholder : "टीवी शो सुझाव प्राप्त करें" ,
     },
     french : {
+        gptName : "chatGPT",
         search : "Recherche",
-        gptSearchPlaceholder : "qu'aimeriez-vous regarder aujourd'hui ?" ,
+        searchPlaceholder : "Rechercher des émissions de télévision",
+        gptSearchPlaceholder : "Obtenir des suggestions d'émissions télévisées" ,
     },        
 
 }

@@ -5,8 +5,7 @@ import { auth } from '../utils/ConfigFileForFireBase';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch , useSelector } from 'react-redux';
 import { removeUser } from '../utils/reduxStore/userSlice';
-import { removeMovie, removePopularMovie, removeTopRatedMovie, removeTrailor, removeUpcomingMovie } from '../utils/reduxStore/movieSlice';
-import { toggleGptPage ,offGptPage } from '../utils/reduxStore/gptSlice';
+import { toggleGptPage } from '../utils/reduxStore/gptSlice';
 import {SupportedLang} from "../utils/languageConstant";
 import {changeLanguage} from "../utils/reduxStore/languageSlice";
 
@@ -19,12 +18,6 @@ const Header = () => {
   const handleSignOut = () => {
     signOut(auth).then(() => {
       // Sign-out successful.
-      dispatch(removeMovie());
-      dispatch(removeTrailor());
-      dispatch(removePopularMovie());
-      dispatch(removeTopRatedMovie());
-      dispatch(removeUpcomingMovie());
-      dispatch(offGptPage());
       dispatch(removeUser());
       navigate("/");
     }).catch((error) => {
