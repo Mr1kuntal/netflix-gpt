@@ -1,5 +1,5 @@
 # App URL
-- netflixgpt-a966f.web.app
+- https://testproject-b7b93.web.app
 
 
 # NetFlix-GPT
@@ -43,6 +43,10 @@
 - added search input initial value for search input action to display some initial tv shows on page
 - added redirection to all images on gpt page (they will redirect to imdb)
 - done memoisation so that component don't have to fetch data again and again
+- added security to all api keys 
+- removed configFileForFireBase.js from gitignore
+- done firebase setup again to host website
+- website is hosted successfully and everything is working fine and checked it on pc and mobile
 
 
 

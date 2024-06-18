@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import {API_OPTIONS_TMDB} from "../ConfigFileForFireBase";
+import {API_OPTIONS_TMDB} from "../searchInput";
 import { useDispatch, useSelector } from "react-redux";
 import { addMovie , addPopularMovie , addTopRatedMovie , addUpcomingMovie } from "../reduxStore/movieSlice";
 import MOVIE_LIST from "../movieList.json";

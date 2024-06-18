@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import {API_OPTIONS_TMDB} from "../ConfigFileForFireBase";
+import {API_OPTIONS_TMDB} from "../searchInput";
 import { useDispatch, useSelector } from "react-redux";
 import { addTrailor } from "../reduxStore/movieSlice";
 import TRAILOR from "../trailor.json";

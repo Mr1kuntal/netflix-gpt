@@ -619,3 +619,15 @@ export const searchInputInitialValue = [
       }
     }
   ]
+
+// this contain tmdb api key thats why written here to not upload to github
+export const API_OPTIONS_TMDB = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer '+ process.env.REACT_APP_TMDB_KEY
+  }
+};
+
+
+export const gptApiKey = process.env.REACT_APP_GPT_KEY;

@@ -1,5 +1,5 @@
 import OpenAI from 'openai';
-import { gptApiKey } from "./ConfigFileForFireBase";
+import { gptApiKey } from "./searchInput";
 
 const openAi = new OpenAI({
     	apiKey: gptApiKey,
