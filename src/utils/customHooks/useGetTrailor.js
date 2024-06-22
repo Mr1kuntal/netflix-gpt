@@ -30,7 +30,7 @@ const useGetTrailor = (movieId) => {
         //     // trailor should be of same movie so add trailor to trailor.json according to moviedId
         //     dispatch(addTrailor(TRAILOR));
         // }
-        dispatch(addTrailor(TRAILOR));
+        dispatch(addTrailor(TRAILOR[13]));
     };
 
     useEffect(()=>{

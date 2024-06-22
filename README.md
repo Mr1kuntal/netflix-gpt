@@ -47,7 +47,8 @@
 - removed configFileForFireBase.js from gitignore
 - done firebase setup again to host website
 - website is hosted successfully and everything is working fine and checked it on pc and mobile
-
+- added redirect to youtube for movie card 
+- update trailor.json file 
 
 
 # Commands used

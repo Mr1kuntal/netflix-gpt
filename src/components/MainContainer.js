@@ -9,7 +9,7 @@ const MainContainer = () => {
 
   if(!allMovie) return ; // if allMovie==null just return
 
-  const mainMovie = allMovie[0];
+  const mainMovie = allMovie[13];
   const {original_title , overview , id } = mainMovie;  
 
 

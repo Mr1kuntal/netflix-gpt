@@ -1,4 +1,5 @@
-{
+[
+  {
     "iso_639_1": "en",
     "iso_3166_1": "US",
     "name": "Final Trailer",
@@ -9,4 +10,225 @@
     "official": true,
     "published_at": "2024-04-30T16:00:26.000Z",
     "id": "663139927aecc6012472b32a"
-}
+  },
+  {
+    "iso_639_1": "en",
+    "iso_3166_1": "US",
+    "name": "Official Trailer",
+    "key": "hRFY_Fesa9Q",
+    "site": "YouTube",
+    "size": 1080,
+    "type": "Trailer",
+    "official": true,
+    "published_at": "2024-03-26T13:00:32.000Z",
+    "id": "6602ca6562f335017d54b0d9"
+  },
+  {
+    "iso_639_1": "en",
+    "iso_3166_1": "US",
+    "name": "Teaser Trailer",
+    "key": "VWavstJydZU",
+    "site": "YouTube",
+    "size": 2160,
+    "type": "Trailer",
+    "official": true,
+    "published_at": "2023-11-09T13:59:01.000Z",
+    "id": "654ce86241a561336b7a5a0d"
+  },
+  {
+    "iso_639_1": "en",
+    "iso_3166_1": "US",
+    "name": "Official Trailer [Subtitled]",
+    "key": "jnCefPQIH98",
+    "site": "YouTube",
+    "size": 1080,
+    "type": "Trailer",
+    "official": true,
+    "published_at": "2024-04-09T08:00:00.000Z",
+    "id": "66150df8ac617c014ab0a9fa"
+  },
+  {
+    "iso_639_1": "en",
+    "iso_3166_1": "US",
+    "name": "Official Trailer",
+    "key": "aDyQxtg0V2w",
+    "site": "YouTube",
+    "size": 1080,
+    "type": "Trailer",
+    "official": true,
+    "published_at": "2023-12-13T14:00:01.000Z",
+    "id": "6579b972ec8a4300fd7eb394"
+  },
+  {
+    "iso_639_1": "en",
+    "iso_3166_1": "US",
+    "name": "Official Trailer",
+    "key": "XNTEjJm4WXg",
+    "site": "YouTube",
+    "size": 1080,
+    "type": "Trailer",
+    "official": true,
+    "published_at": "2024-01-30T14:00:32.000Z",
+    "id": "65b919ca33a37601628610a8"
+  },
+  {
+    "iso_639_1": "en",
+    "iso_3166_1": "US",
+    "name": "Official Trailer",
+    "key": "Jokpt_LJpbw",
+    "site": "YouTube",
+    "size": 1080,
+    "type": "Trailer",
+    "official": true,
+    "published_at": "2024-04-23T14:15:02.000Z",
+    "id": "662829e162f335014bd85a8e"
+  },
+  {
+    "iso_639_1": "en",
+    "iso_3166_1": "US",
+    "name": "Official Trailer",
+    "key": "DXwa8DKIK7g",
+    "site": "YouTube",
+    "size": 1080,
+    "type": "Trailer",
+    "official": true,
+    "published_at": "2024-04-18T14:00:00.000Z",
+    "id": "662128ad8a88b20162c9d505"
+  },
+  {
+    "iso_639_1": "en",
+    "iso_3166_1": "US",
+    "name": "Official Trailer",
+    "key": "j7jPnwVGdZ8",
+    "site": "YouTube",
+    "size": 1080,
+    "type": "Trailer",
+    "official": true,
+    "published_at": "2023-11-02T14:59:31.000Z",
+    "id": "6543bc6b6beaea012c8cce25"
+  },
+  {
+    "iso_639_1": "en",
+    "iso_3166_1": "US",
+    "name": "Official Trailer [Subtitled]",
+    "key": "RTeuhVG7LXg",
+    "site": "YouTube",
+    "size": 1080,
+    "type": "Trailer",
+    "official": true,
+    "published_at": "2024-05-15T13:00:00.000Z",
+    "id": "6644bfe239a681446b77f833"
+  },
+  {
+    "iso_639_1": "en",
+    "iso_3166_1": "US",
+    "name": "Official Trailer [Subtitled]",
+    "key": "nWMbcamVl7Y",
+    "site": "YouTube",
+    "size": 1080,
+    "type": "Trailer",
+    "official": true,
+    "published_at": "2024-05-05T23:00:00.000Z",
+    "id": "66383f218de0ae012cf6d431"
+  },
+  {
+    "iso_639_1": "en",
+    "iso_3166_1": "US",
+    "name": "Official Trailer #1",
+    "key": "XJMuhwVlca4",
+    "site": "YouTube",
+    "size": 2160,
+    "type": "Trailer",
+    "official": true,
+    "published_at": "2023-11-30T23:32:51.000Z",
+    "id": "6569217363536a00ab367de5"
+  },
+  {
+    "key": "vlbZPW4FayA",
+    "type": "Trailer"
+  },
+  {
+    "iso_639_1": "en",
+    "iso_3166_1": "US",
+    "name": "Official Trailer",
+    "key": "IeFWNtMo1Fs",
+    "site": "YouTube",
+    "size": 1080,
+    "type": "Trailer",
+    "official": true,
+    "published_at": "2023-11-13T14:00:22.000Z",
+    "id": "65522cd49653f613f473e2d8"
+  },
+  {
+    "iso_639_1": "en",
+    "iso_3166_1": "US",
+    "name": "Official Redband Trailer",
+    "key": "ewxS9Z-XXYo",
+    "site": "YouTube",
+    "size": 1080,
+    "type": "Trailer",
+    "official": true,
+    "published_at": "2024-01-25T17:01:32.000Z",
+    "id": "65b2946d1c63290152934c6d"
+  },
+  {
+    "iso_639_1": "en",
+    "iso_3166_1": "US",
+    "name": "Official Trailer",
+    "key": "iDWQorTluFs",
+    "site": "YouTube",
+    "size": 1080,
+    "type": "Trailer",
+    "official": true,
+    "published_at": "2024-02-22T15:56:51.000Z",
+    "id": "65d7708bed2ac2017c36bc2c"
+  },
+  {
+    "iso_639_1": "en",
+    "iso_3166_1": "US",
+    "name": "Official Trailer",
+    "key": "b80FbdimIHs",
+    "site": "YouTube",
+    "size": 1080,
+    "type": "Trailer",
+    "official": true,
+    "published_at": "2024-05-20T18:05:46.000Z",
+    "id": "664b91ae7509698a011ddc1d"
+  },
+  {
+    "iso_639_1": "en",
+    "iso_3166_1": "US",
+    "name": "Red-Band Official Trailer",
+    "key": "b49iV7u-etA",
+    "site": "YouTube",
+    "size": 1080,
+    "type": "Trailer",
+    "official": true,
+    "published_at": "2024-04-29T16:23:52.000Z",
+    "id": "664353a8140b7fc7fab8a21f"
+  },
+  {
+    "iso_639_1": "en",
+    "iso_3166_1": "US",
+    "name": "Official Trailer",
+    "key": "YDtbf9Rkjzw",
+    "site": "YouTube",
+    "size": 1080,
+    "type": "Trailer",
+    "official": true,
+    "published_at": "2024-04-16T17:00:08.000Z",
+    "id": "66283574b9a0bd0147d4ef6b"
+  },
+  {
+    "iso_639_1": "en",
+    "iso_3166_1": "US",
+    "name": "Official Trailer",
+    "key": "dYo91Fq9tKY",
+    "site": "YouTube",
+    "size": 2160,
+    "type": "Trailer",
+    "official": true,
+    "published_at": "2024-04-22T16:00:28.000Z",
+    "id": "66268fe763e6fb0165fc4a12"
+  }
+]
